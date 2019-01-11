@@ -1,0 +1,95 @@
+{
+    "info": 
+    {
+      "title": "API REST Documentation Utilisateur / Entreprise",
+      "version": "1.0.0",
+      "license": 
+      {
+        "name": "ISC"
+      },
+      "description": "API REST :  Vérification de l'accès d'un utilisateur sur des données"
+    },
+    "basePath" : "/api/v1",
+    "host" :  "localhost:8080",
+    "tags" : 
+    [
+        {
+            "name" : "Accès Utilisateur",
+            "description" : "Méthode permettant de vérifier l'accès d'un utilisateur sur une entreprise"
+        },
+        {
+            "name" : "Liste Entreprise de l'utilisateur",
+            "description" : "Méthode permettant de lister les entreprises de l'utilisateur"
+        }
+    ],
+    "paths": 
+    {
+      "/api/v1/user":
+      {
+        "post": 
+        {
+            "tags" : ["Accès Utilisateur"],
+            "summary": "/api/v1/user",
+            "consumes": ["application/json"],
+            "parameters": 
+            [    
+                {
+                    "name": "idUser",
+                    "in": "body",
+                    "required": true
+                },
+                {
+                    "name": "idFirm",
+                    "in": "body",
+                    "required": true
+                }       
+            ],
+            "responses": 
+            {
+                "200 : OK" : 
+                {
+                    "status" : "success",
+                    "description": "Sucess - Return true"                        
+                },
+                "400 : Bad Request" :
+                 {
+                    "status" : "error",
+                    "description": "Error - Wrong id"                        
+                }  
+            }
+        }
+        
+      },
+      "/api/v1/users/firm": 
+      {
+        "post": 
+        {
+            "tags" : ["Liste Entreprise de l'utilisateur"],
+            "summary": "/api/v1/user/firm",
+            "consumes": ["application/json"],
+            "parameters":
+            [    
+                {
+                    "name": "idUser",
+                    "in": "body",
+                    "required": true
+                }     
+            ],
+            "responses": 
+            {
+                "200 : OK" : 
+                {
+                    "status" : "success",
+                    "description": "Sucess - Return List Firm"                        
+                },
+                "400 : Bad Request" :
+                 {
+                    "status" : "error",
+                    "description": "Error - Wrong id"                        
+                }  
+            }
+        }
+      }
+    },
+    "swagger": "2.0"
+  }

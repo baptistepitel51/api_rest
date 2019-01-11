@@ -1,0 +1,17 @@
+{
+    "rootAPI" : "/api/v1",
+    "port" : 8080,
+    "db" : 
+    {
+        "host"     : "localhost",
+        "user"    : "root",
+        "password" : "root",
+        "database" : "security"
+     },
+     "errors" : 
+     {
+         "wrongId" : "Wrong id",
+         "noNameValue" : "No name value",
+         "noAcces" : "No acces firm"
+     }
+}
