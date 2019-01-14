@@ -116,6 +116,8 @@ let user = class
                     })            
                     .then((result) => 
                     {
+                        // Affichage du resultat en console
+                        console.log(result);
                         // On utilise la méthode next pour envoyer le resultat
                         next((result));
                     }) 
