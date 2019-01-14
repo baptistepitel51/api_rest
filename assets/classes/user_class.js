@@ -11,7 +11,6 @@ module.exports = (_db, _config) =>
         return user;
 }
 
-
 // On crée la classe user
 let user = class
 {
@@ -27,7 +26,7 @@ let user = class
 
             // On verifie que l'utilisateur n'est pas vide
             if(idUser && idUser.trim() != '')
-            {
+            {                
                 // On enlève les espace sur les paramètres
                 idUser = idUser.trim();
                 idFirm = idFirm.trim();
