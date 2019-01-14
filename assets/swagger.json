@@ -1,13 +1,18 @@
 {
     "info": 
     {
-      "title": "API REST Documentation Utilisateur / Entreprise",
+      "title": "API REST Utilisateur / Entreprise",
       "version": "1.0.0",
       "license": 
       {
-        "name": "ISC"
+        "name": "Apache 2.0",
+        "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
       },
-      "description": "API REST :  Vérification de l'accès d'un utilisateur sur des données //      GitHub :  https://github.com/baptistepitel51/api_rest"
+       "description": "Sur cette api, on trouve deux méthodes une pour savoir si l'utilisateur possède les droits d'accès sur une entreprise puis la deuxième qui permet de récupérer la liste des entreprises de l'utilisateur.    //     GitHub :  https://github.com/baptistepitel51/api_rest  // GitBook : https://pitel-api-rest.gitbook.io/api-rest-user-firm/ ",
+      "contact" : 
+      {
+          "email" : "naptiste.pitel@ivy-group.com"
+      }
     },
     "basePath" : "/api/v1",
     "host" :  "localhost:8080",
