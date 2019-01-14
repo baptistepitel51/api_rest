@@ -1,5 +1,5 @@
 
-// Méthode qui renvoit le status success et le resultat
+// Méthode qui renvoie le status "success" et le "result"
 exports.success =  (result) =>
 {
     return {
@@ -8,7 +8,7 @@ exports.success =  (result) =>
     }
 }
 
-// Méthode qui renvoit le status error et le message d'erreur
+// Méthode qui renvoie le status "error" et le message d'erreur
 exports.error = (message) =>
 {
     return {
@@ -17,13 +17,13 @@ exports.error = (message) =>
     }
 }
 
-// Méthode qui permet de verifier si l'objet passer en paramètre est une instance de Error
+// Méthode qui permet de vérifier si l'objet passé en paramètre est une instance de "Error"
 exports.isErr = (err) =>
 {
     return err instanceof Error;
 }
 
-// Méthode qui permet de verifiier si l'objet est une error ou un success et d'appeler la méthode qui convient en fonction
+// Méthode qui permet de vérifier si l'objet est une "error" ou un "success" et d'appeler la méthode qui convient en fonction
 exports.checkAndChange = (obj) =>
 {
     if(this.isErr(obj))

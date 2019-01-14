@@ -3,7 +3,7 @@
 // Variable dataBase et config 
 let db, config;
 
-// On defini les variables db et config
+// On definit les variables db et config
 module.exports = (_db, _config) =>
 {
         db = _db;
@@ -24,10 +24,10 @@ let user = class
             console.log(idUser);
             console.log(idFirm);
 
-            // On verifie que l'utilisateur n'est pas vide
+            // On vérifie que l'utilisateur n'est pas vide
             if(idUser && idUser.trim() != '')
             {                
-                // On enlève les espace sur les paramètres
+                // On enlève les espaces sur les paramètres
                 idUser = idUser.trim();
                 idFirm = idFirm.trim();
 
@@ -40,7 +40,7 @@ let user = class
                 db.query('SELECT * FROM f0001la WHERE TRIM(MSUSER) = ?', [idUser])
                 .then((result) => 
                 {
-                    // On verifie si le resultat est différent d'undefined
+                    // On vérifie si le resultat est différent d'undefined
                     if(result[0] != undefined)
                     {
                          // On retourne une nouvelle promesse avec une requêtes sql  qui vérifie si la compagny existe dans la base de données
@@ -54,7 +54,7 @@ let user = class
                 })            
                 .then((result) => 
                 {
-                    // On verifie si le resultat est différent d'undefined
+                    // On vérifie si le resultat est différent d'undefined
                     if(result[0] != undefined)
                     {
                          // On retourne une nouvelle promesse avec une requêtes sql  qui vérifie le droit d'accès de l'utilisateur sur l'entreprise mis en paramètre
@@ -100,10 +100,10 @@ let user = class
          // On crée une promesse pour effectuer les requêtes
         return new Promise((next) => 
         {
-             // On verifie que l'utilisateur n'est pas vide
+             // On vérifie que l'utilisateur n'est pas vide
             if(idUser && idUser.trim() != '')
             {
-                // On enlève les espace sur le paramètre
+                // On enlève les espaces sur le paramètre
                 idUser = idUser.trim();
 
                  // Affichage dans la console du paramètre sans les espaces
@@ -114,7 +114,7 @@ let user = class
                 db.query('SELECT * FROM f0001la WHERE TRIM(MSUSER) = ?', [idUser])
                     .then((result) => 
                     {
-                        // On verifie si le resultat est différent d'undefined
+                        // On vérifie si le resultat est différent d'undefined
                         if(result[0] != undefined)
                         {
                             // On retourne une nouvelle promesse avec une requêtes sql  qui permet de récupérer la liste d'entreprise de l'utilisateur
