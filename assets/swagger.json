@@ -7,7 +7,7 @@
       {
         "name": "ISC"
       },
-      "description": "API REST :  Vérification de l'accès d'un utilisateur sur des données"
+      "description": "API REST :  Vérification de l'accès d'un utilisateur sur des données //      GitHub :  https://github.com/baptistepitel51/api_rest"
     },
     "basePath" : "/api/v1",
     "host" :  "localhost:8080",
@@ -35,14 +35,24 @@
             [    
                 {
                     "name": "idUser",
+                    "description" : "User ID",
                     "in": "body",
-                    "required": true
+                    "required": true,
+                    "example" : 
+                    {
+                        "idUser" : "ANSELMI" 
+                    }
                 },
                 {
-                    "name": "idFirm",
+                    "name": "idFirm_1",
+                    "description" : "Compagny ID",
                     "in": "body",
-                    "required": true
-                }       
+                    "required": true,
+                    "example" : 
+                    {
+                        "idFirm" : "I959" 
+                    }
+                }   
             ],
             "responses": 
             {
@@ -71,8 +81,13 @@
             [    
                 {
                     "name": "idUser",
+                    "description" : "User ID",
                     "in": "body",
-                    "required": true
+                    "required": true,
+                    "example" : 
+                    {
+                        "idUser" : "ANSELMI" 
+                    }
                 }     
             ],
             "responses": 

@@ -1,5 +1,5 @@
 {
-    "rootAPI" : "/api/v1",
+    "rootAPI" : "/api/v1/",
     "port" : 8080,
     "db" : 
     {
