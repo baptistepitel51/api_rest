@@ -64,9 +64,9 @@ mysql.createConnection(
         .post(async(req,res) => 
         {           
             // On appelle la méthode isAutorized qui permet de savoir si l'utilisateur à acces a l'entreprise mis en paramètre
-            let isAuorized = await user.isAutorized(req.body.userId, req.body.firmId);   
+            let isAutorized = await user.isAutorized(req.body.userId, req.body.firmId);   
             // Permet de renvoyer le resultat avec un message de succes ou d'erreur              
-            res.json(checkAndChange(isAuorized));                
+            res.json(checkAndChange(isAutorized));                
         });
 
     // On crée la route /firm
