@@ -8,7 +8,7 @@
         "name": "Apache 2.0",
         "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
       },
-       "description": "Sur cette api, on trouve deux méthodes une pour savoir si l'utilisateur possède les droits d'accès sur une entreprise puis la deuxième qui permet de récupérer la liste des entreprises de l'utilisateur.    //     GitHub :  https://github.com/baptistepitel51/api_rest  // GitBook : https://pitel-api-rest.gitbook.io/api-rest-user-firm/ ",
+       "description": "Sur cette api, on trouve deux méthodes une pour savoir si l'utilisateur possède les droits d'accès sur une entreprise puis la deuxième qui permet de récupérer la liste des entreprises de l'utilisateur.    //     GitHub de l'API :  https://github.com/baptistepitel51/api_rest  // GitBook de l'API : https://pitel-api-rest.gitbook.io/api-rest-user-firm/ // Exemple d'application test : https://github.com/baptistepitel51/api_test  ",
       "contact" : 
       {
           "email" : "naptiste.pitel@ivy-group.com"
