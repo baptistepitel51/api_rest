@@ -10,8 +10,9 @@
      },
      "errors" : 
      {
-         "wrongId" : "Wrong id",
+         "wrongId" : "Wrong user id",
          "noIdValue" : "No Id value",
+         "wrongCompagny" : "Wrong compagny Id ",
          "noAccess" : "No access compagny"
      }
 }

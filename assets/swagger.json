@@ -64,7 +64,12 @@
                 "400 : Bad Request" :
                  {
                     "status" : "error",
-                    "description": "Error - Wrong id"                        
+                    "description": "Error - Wrong user id"                        
+                }  ,
+                "404 : Not Found" :
+                 {
+                    "status" : "error",
+                    "description": "Error - Wrong compagny id"                        
                 }  ,
                 "401 : Unauthorized" :
                  {

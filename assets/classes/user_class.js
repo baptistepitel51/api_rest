@@ -43,8 +43,8 @@ let user = class
                     // On verifie si le resultat est différent d'undefined
                     if(result[0] != undefined)
                     {
-                        // On retourne une nouvelle promesse avec une requêtes sql  qui vérifie le droit d'accès de l'utilisateur sur l'entreprise mis en paramètre
-                        return   db.query('SELECT * FROM f0001la WHERE TRIM(MSUSER) = ? && ( (TRIM(MSMCUF) <= ? && TRIM(MSMCUT) >= ?) && (LENGTH(TRIM(MSMCUT)) = LENGTH(?)) )', [idUser,idFirm,idFirm, idFirm])
+                         // On retourne une nouvelle promesse avec une requêtes sql  qui vérifie si la compagny existe dans la base de données
+                        return   db.query('SELECT * FROM f0001la WHERE ( (TRIM(MSMCUF) <= ? && TRIM(MSMCUT) >= ?) && (LENGTH(TRIM(MSMCUT)) = LENGTH(?)) )', [idFirm,idFirm, idFirm])
                     }
                     else
                     {
@@ -55,6 +55,19 @@ let user = class
                 .then((result) => 
                 {
                     // On verifie si le resultat est différent d'undefined
+                    if(result[0] != undefined)
+                    {
+                         // On retourne une nouvelle promesse avec une requêtes sql  qui vérifie le droit d'accès de l'utilisateur sur l'entreprise mis en paramètre
+                        return   db.query('SELECT * FROM f0001la WHERE TRIM(MSUSER) = ? && ( (TRIM(MSMCUF) <= ? && TRIM(MSMCUT) >= ?) && (LENGTH(TRIM(MSMCUT)) = LENGTH(?)) )', [idUser,idFirm,idFirm, idFirm])
+                    }
+                    else
+                    {                        
+                        // On utilise la méthode next pour envoyer une erreur Wrong Id Compagny
+                        next(new Error(config.errors.wrongCompagny));
+                    }
+                }) 
+                .then((result) =>
+                {
                     if(result[0] != undefined)
                     {
                         // On affiche le resultat dans la console
@@ -69,7 +82,7 @@ let user = class
                         // On utilise la méthode next pour envoyer une erreur No Access
                         next(new Error(config.errors.noAccess));
                     }
-                }) 
+                })
                 .catch((err) => next(err)) // Renvoie une erreur
             }
             else
