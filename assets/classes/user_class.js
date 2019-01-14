@@ -67,7 +67,7 @@ let user = class
                         // On affiche le resultat dans la console
                         console.log(result);
                         // On utilise la méthode next pour envoyer une erreur No Access
-                        next(new Error(config.errors.noAcces));
+                        next(new Error(config.errors.noAccess));
                     }
                 }) 
                 .catch((err) => next(err)) // Renvoie une erreur
@@ -75,7 +75,7 @@ let user = class
             else
             {
                 // Renvoie une erreur si la valeur de l'utilisateur n'est pas correcte
-                next(new Error(config.errors.noNameValue));
+                next(new Error(config.errors.noIdValue));
             }   
         });
     }    
@@ -125,7 +125,7 @@ let user = class
                 else
                 {
                     // Renvoie une erreur si la valeur de l'utilisateur n'est pas correcte
-                    next(new Error(config.errors.noNameValue));
+                    next(new Error(config.errors.noIdValue));
                 }   
             });
     }    

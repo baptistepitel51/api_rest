@@ -11,7 +11,7 @@
      "errors" : 
      {
          "wrongId" : "Wrong id",
-         "noNameValue" : "No name value",
-         "noAcces" : "No acces firm"
+         "noIdValue" : "No Id value",
+         "noAccess" : "No access compagny"
      }
 }

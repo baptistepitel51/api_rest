@@ -59,13 +59,18 @@
                 "200 : OK" : 
                 {
                     "status" : "success",
-                    "description": "Sucess - Return true"                        
+                    "description": "success - Return true"                        
                 },
                 "400 : Bad Request" :
                  {
                     "status" : "error",
                     "description": "Error - Wrong id"                        
-                }  
+                }  ,
+                "401 : Unauthorized" :
+                 {
+                    "status" : "error",
+                    "description": "Error - No Access compagny"                    
+                } 
             }
         }
         
@@ -95,7 +100,7 @@
                 "200 : OK" : 
                 {
                     "status" : "success",
-                    "description": "Sucess - Return List Firm"                        
+                    "description": "success - Return List Firm"                        
                 },
                 "400 : Bad Request" :
                  {
