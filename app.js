@@ -4,7 +4,7 @@
 const {success, error, checkAndChange} = require('./assets/functions');
 // Accès au module npm promise-mysql qui permet l'accès à mysql et l'accès au promesse
 const mysql = require('promise-mysql');
-// Accès au module npm body-parser  qui permet d'analyser le coprs des demandes entrantes (requête post etc...)
+// Accès au module npm body-parser  qui permet d'analyser le corps des demandes entrantes (requête post etc...)
 const bodyParser = require('body-parser');
 // Accès au module npm Express qui est un framework pour créer l'application
 const express = require('express');
